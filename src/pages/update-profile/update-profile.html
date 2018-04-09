@@ -1,0 +1,60 @@
+<!--
+  Generated template for the UpdateProfilePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>{{displayName}}</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="updateProfile()">
+        <ion-icon name='checkmark-circle'></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar> 
+
+</ion-header>
+
+
+<ion-content>
+
+  <img src="{{displayPic}}" (click)="photoChoose()">
+
+  <ion-list>
+
+    <ion-item>
+      <ion-label fixed>NAME</ion-label>
+      <ion-input type="text" value="{{displayName}}" disabled></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label fixed>EMAIL</ion-label>
+      <ion-input type="email" value="{{email}}" disabled></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label fixed>DOB</ion-label>
+      <ion-datetime displayFormat="DD/MM/YYYY"  [(ngModel)]="dob"></ion-datetime>
+    </ion-item>
+    
+  
+    <ion-item>
+      <ion-label fixed>POB</ion-label>
+      <ion-input type="text" value="{{pob}}" [(ngModel)]="pob"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label fixed>JOB</ion-label>
+      <ion-input type="text" value="{{currentJob}}" [(ngModel)]="currentJob"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label fixed>ADDRESS</ion-label>
+      <ion-input type="text" value="{{currentAddress}}" [(ngModel)]="currentAddress"></ion-input>
+    </ion-item>
+  
+  </ion-list>
+
+</ion-content>

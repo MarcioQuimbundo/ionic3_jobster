@@ -1,0 +1,59 @@
+<ion-header>
+
+    <ion-navbar color="primary">
+        <ion-title>PROFILE</ion-title>
+        <ion-buttons end>
+            <button ion-button icon-only (click)="profileUpdt()">
+                <ion-icon name='create'></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+
+    <ion-card>
+        <ion-item>
+            <ion-avatar item-start>
+                <img src="{{displayPic}}">
+            </ion-avatar>
+            <h2>{{displayName}}</h2>
+            <p>November 5, 1955</p>
+        </ion-item>
+    </ion-card>
+    <ion-list>
+    
+        <ion-item>
+            <ion-label fixed>Email</ion-label>
+            <ion-input type="email" value="{{email}}" disabled></ion-input>
+        </ion-item>
+    
+        <ion-item>
+            <ion-label fixed>ID No.</ion-label>
+            <ion-input type="number" value="{{nationalID}}" disabled></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label fixed>DOB</ion-label>
+            <ion-input type="text" value="{{dob}}" disabled></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label fixed>POB</ion-label>
+            <ion-input type="text" value="{{pob}}" disabled></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label fixed>Job</ion-label>
+            <ion-input type="text" value="{{currentJob}}" disabled></ion-input>
+        </ion-item>
+        
+        <ion-item>
+            <ion-label fixed>Address</ion-label>
+            <ion-input type="text" value="{{currentAddress}}" disabled></ion-input>
+        </ion-item>
+    
+    </ion-list>
+    
+</ion-content>
